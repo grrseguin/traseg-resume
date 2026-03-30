@@ -1,0 +1,30 @@
+{{ define "main" }}
+  <section
+    id="hero-section"
+    class="flex-grow flex items-center justify-center pt-32 pb-20 px-4 sm:px-6 relative overflow-hidden"
+  >
+    {{ with site.GetPage "/hero" }}
+      {{ .Render "home-section" }}
+    {{ end }}
+  </section>
+
+  {{ with site.GetPage "/about-me" }}
+    <section id="{{ .Params.menus.main.params.href }}" class="py-20 bg-slate-800/50">
+        {{ .Render "home-section" }}
+    </section>
+  {{ end }}
+
+  {{ with site.GetPage "/graduations" }}
+    <section id="{{ .Params.menus.main.params.href }}" class="py-20">
+        {{ .Render "home-section" }}
+    </section>
+  {{ end }}
+
+  {{ with site.GetPage "/contact" }}
+    <section id="{{ .Params.menus.main.params.href }}" class="py-32 text-center">
+      <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+          {{ .Content }}
+      </div>
+    </section>
+  {{ end }}
+{{ end }}

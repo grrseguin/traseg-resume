@@ -1,0 +1,148 @@
+@media print {
+  @page {
+    size: A4;
+    margin: 1.2cm;
+  }
+  body {
+    background: white !important;
+    color: black !important;
+    display: block !important;
+  }
+  /* Hide UI elements */
+  nav,
+  footer,
+  .animate-blob,
+  .glass-card > .h-48,
+  .group-hover\:translate-x-3,
+  #contact {
+    display: none !important;
+  }
+  .gradient-text {
+    background: none !important;
+    -webkit-text-fill-color: black !important;
+    color: black !important;
+  }
+  /* Layout adjustments for single A4 */
+  section {
+    padding: 0 !important;
+    margin-bottom: 1.5rem !important;
+    break-inside: avoid;
+  }
+  /* Hero */
+  #hero-section {
+    pt: 0;
+    pb: 0;
+  }
+  h1 {
+    font-size: 24pt !important;
+    margin-bottom: 0.25rem !important;
+    color: black !important;
+  }
+  h1 span {
+    font-size: 16pt !important;
+    color: #555 !important;
+    display: block;
+    margin-top: 4px;
+  }
+  .hero-subtitle {
+    display: none !important;
+  }
+  .hero-desc {
+    font-size: 11pt !important;
+    color: #333 !important;
+    max-width: 100% !important;
+    margin-bottom: 1rem !important;
+  }
+  .hero-buttons {
+    display: none !important;
+  }
+
+  /* Contact info injected via CSS for print at the top */
+  #hero-section::after {
+    content: "hello@example.com • github.com/alexdev • linkedin.com/in/alexdev";
+    display: block;
+    font-size: 10pt;
+    margin-top: 0.5rem;
+    color: #555;
+  }
+
+  /* About */
+  #about {
+    background: none !important;
+    margin-bottom: 1rem !important;
+  }
+  #about h3 {
+    font-size: 14pt !important;
+    margin-bottom: 0.5rem !important;
+    color: black !important;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 4px;
+  }
+  #about h3 span,
+  #about h3 div {
+    display: none !important;
+  }
+  #about .grid {
+    display: block !important;
+    gap: 0 !important;
+  }
+  #about .max-w-sm {
+    display: none !important;
+  }
+  #about p {
+    font-size: 10pt !important;
+    margin-bottom: 0.25rem !important;
+    color: #222 !important;
+  }
+  #about ul {
+    font-size: 10pt !important;
+    color: black !important;
+    margin-top: 0.5rem !important;
+  }
+
+  /* Projects */
+  #projects {
+    margin-bottom: 0 !important;
+  }
+  #projects h3 {
+    font-size: 14pt !important;
+    margin-bottom: 0.5rem !important;
+    color: black !important;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 4px;
+  }
+  #projects h3 span,
+  #projects h3 div {
+    display: none !important;
+  }
+  #projects .grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 1rem !important;
+  }
+  .glass-card {
+    background: none !important;
+    border: 1px solid #ddd !important;
+    box-shadow: none !important;
+    border-radius: 4px !important;
+    break-inside: avoid;
+  }
+  .glass-card .p-6 {
+    padding: 0.75rem !important;
+  }
+  .glass-card h4 {
+    font-size: 12pt !important;
+    color: black !important;
+    margin-bottom: 0.25rem !important;
+  }
+  .glass-card p {
+    font-size: 9.5pt !important;
+    color: #333 !important;
+    margin-bottom: 0.5rem !important;
+    -webkit-line-clamp: unset !important;
+  }
+  .glass-card ul {
+    font-size: 8.5pt !important;
+    color: #666 !important;
+  }
+}

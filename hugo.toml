@@ -1,7 +1,51 @@
 baseURL = 'https://traseg.github.io/resume/'
 languageCode = 'en-us'
-title = 'My Portfolio'
+title = "Tom Seguin's resume"
 
 [params]
-  author = "Tom Seguin"
   description = "A personal portfolio site"
+  [params.author]
+    name = 'Tom Seguin'
+    email = "traseguin@gmail.com"
+    [[params.author.socials]]
+      name = "GitHub"
+      link = "https://github.com/traseg"
+      icon = "images/github.svg"
+    [[params.author.socials]]
+      name = "LinkedIn"
+      link = "https://linkedin.com/in/traseg"
+      icon = "images/linkedin.svg"
+
+[languages]
+  [languages.en]
+    languageName = "English"
+    weight = 0
+  [languages.fr]
+    languageName = "Français"
+    weight = 1
+    title = "Curriculum vitae de Tom Seguin"
+    [languages.fr.params]
+      description = "Curriculum vitae de Tom Seguin"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[build]
+  [build.buildStats]
+    enable = true
+  [[build.cachebusters]]
+    source = 'assets/notwatching/hugo_stats\.json'
+    target = 'css'
+  [[build.cachebusters]]
+    source = '(postcss|tailwind)\.config\.js'
+    target = 'css'
+  [module]
+    [[module.mounts]]
+      source = 'assets'
+      target = 'assets'
+    [[module.mounts]]
+      disableWatch = true
+      source = 'hugo_stats.json'
+      target = 'assets/notwatching/hugo_stats.json'
