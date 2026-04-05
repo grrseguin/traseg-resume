@@ -1,0 +1,24 @@
+{
+  "name": "resume",
+  "version": "1.0.0",
+  "description": "Tom Seguin's portfolio",
+  "scripts": {
+    "start": "hugo server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/traseg/resume.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/traseg/resume/issues"
+  },
+  "homepage": "https://github.com/traseg/resume#readme",
+  "devDependencies": {
+    "@tailwindcss/cli": "4.2.2",
+    "@tailwindcss/typography": "0.5.19",
+    "tailwindcss": "4.2.2"
+  }
+}

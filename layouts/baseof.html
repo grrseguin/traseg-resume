@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      {{ .Site.Title }}
+    </title>
+    {{ with (templates.Defer (dict "key" "global")) }}
+      {{ partial "css.html" . }}
+    {{ end }}
+  </head>
+  <body class="antialiased selection:bg-brand-500 selection:text-white flex flex-col min-h-screen">
+    {{ partial "navigation.html" . }}
+
+    <main>
+      {{ block "main" . }}
+        No block main found
+      {{ end }}
+    </main>
+
+    <footer class="py-8 text-center text-slate-500 text-sm flex flex-col items-center">
+      {{ with site.Params.author.socials }}
+        <div class="flex space-x-6 mb-4">
+          {{ range . }}
+            <a href="{{ .link }}" target="_blank" rel="noopener noreferrer" class="hover:text-brand-400 transition-colors" aria-label="{{ .name }}">
+              <span class="sr-only">{{ .name }}</span>
+              {{ $svg := resources.Get .icon }}
+              {{ if $svg }}
+                {{ $svg.Content | safeHTML }}
+              {{ end }}
+            </a>
+          {{ end }}
+        </div>
+      {{ end }}
+      <p>Built with ❤️ and Tailwind CSS. Hosted on GitHub Pages.</p>
+    </footer>
+  </body>
+</html>
