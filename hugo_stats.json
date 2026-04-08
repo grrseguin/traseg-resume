@@ -152,7 +152,6 @@
       "scroll-smooth",
       "selection:bg-brand-500",
       "selection:text-white",
-      "shadow-brand-500",
       "shadow-brand-500/30",
       "shadow-lg",
       "sm:px-6",
@@ -197,10 +196,8 @@
       "z-50"
     ],
     "ids": [
+      "",
       "03-whats-next",
-      "About",
-      "Contact Me",
-      "Projects",
       "about",
       "contact",
       "get-in-touch",
@@ -208,7 +205,8 @@
       "hi-my-name-is",
       "i-build-things-for-the-web",
       "projects",
-      "tom-seguin"
+      "tom-seguin",
+      "à-propos"
     ]
   }
 }
